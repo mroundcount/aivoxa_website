@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Aivoxa Upload</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your,Keywords">
+    <meta name="author" content="HimanshuGupta">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">  
+    <!-- Animate CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Basic stylesheet -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Font awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">   
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-color.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo/favicon.png">
+  </head>
+
+
+  <body>
+    <header>
+      <!-- primary menu -->
+    </header>
+    <!--/ header end -->
+
+
+
+      <!-- Div tags when a user is logged in -->
+      <div id="user_div" class="upload-form">
+        <div class="container">
+          <div class="form-content">
+
+            <input id="title_field" type="text" class="form-control input-lg" placeholder="Title">
+            <input id="category_field" type="text" class="form-control input-lg" placeholder="Category">
+            <input id="description_field" type="text" class="form-control input-lg" placeholder="Description">
+            <input id="difficulty_field" type="text" class="form-control input-lg" placeholder="Difficulty">
+            <input id="prompt_field" type="text" class="form-control input-lg" placeholder="Prompt">
+            <input id="key_words_field" type="text" class="form-control input-lg" placeholder="Keywords">
+            
+            <!--
+            <label>Choose a genre for your song:</label><br>
+            <select id="genre_field" class="form-genre-field">
+              <option value="Alternative Rock">Alternative Rock</option>
+              <option value="Classical">Classical</option>
+              <option value="Country">Country</option>
+              <option value="Dance & EDM">Dance & EDM</option>
+              <option value="Disco">Disco</option>
+              <option value="Folk">Folk</option>
+              <option value="Hip-hop & Rap">Hip-hop & Rap</option>
+              <option value="Indie">Indie</option>
+              <option value="Jazz & Blues">Jazz & Blues</option>
+              <option value="Latin">Latin</option>
+              <option value="Metal">Metal</option>
+              <option value="Piano">Piano</option>
+              <option value="Pop">Pop</option>
+              <option value="R&B & Soul">R&B & Soul</option>
+              <option value="Reggae">Reggae</option>
+              <option value="Reggaeton">Reggaeton</option>
+              <option value="Rock">Rock</option>
+              <option value="World">World</option>
+            </select><br><br>
+            -->
+            <!-- Adding a checkbox for explicit content -->
+
+            <!-- Clicking this button will write to the audioFiles node on firebase --> 
+            <br>
+            <button class="btn btn-lg btn-theme" id="uploadBtn" onclick="uploadScenario()">Sumbmit</button>
+            <br>
+            This is only for creating new categories.
+            <input id="new_category_field" type="text" class="form-control input-lg" placeholder=" New Category">
+            <button class="btn btn-lg btn-theme" id="uploadCategoryBtn" onclick="uploadScenarioCategory()">Sumbmit Category</button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- footer -->
+      <footer>
+        <div class="container">
+          <p class="copy-right">&copy; copyright 2025 Aivoxa, All rights are reserved.</p>
+        </div>
+      </footer>
+      <!-- footer end -->
+
+    <!-- My firebase configuraton..... no not modify -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script> 
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "put api key here",
+        authDomain: "aivoxa.firebaseapp.com",
+        databaseURL: "https://aivoxa-default-rtdb.firebaseio.com",
+        projectId: "aivoxa",
+        storageBucket: "aivoxa.firebasestorage.app",
+        messagingSenderId: "334260793539",
+        appId: "1:334260793539:web:e2f6c29e3525f96529f276",
+        measurementId: "G-N0E1X8E7B4"
+        };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/scenario_manager_script.js"></script>
+
+
+
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- WayPoints JS -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- Include js plugin -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- One Page Nav -->
+    <script src="js/jquery.nav.js"></script>
+    <!-- Respond JS for IE8 -->
+    <script src="js/respond.min.js"></script>
+    <!-- HTML5 Support for IE -->
+    <script src="js/html5shiv.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
+  </body>
+
+</html>
