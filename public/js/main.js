@@ -1,3 +1,8 @@
+
+function setPlayStoreAlert() {
+  alert("Hang in there kids... we are still waiting for Google Play Store approval.");
+}
+
 (function ($) {
     "use strict";
     
