@@ -1,3 +1,7 @@
+const boiler_plate_part_1 = "Im learning a new language and I'd like you to help me practice speaking the language. Lets do a practice conversation together. Lets pretend ";
+const boiler_plate_part_2 = ' Your job is to help me out in this situation. We will go back and forth and role play. Then after the conversation ends (i.e. you have helped me accomplish this) or i tell you to "End the conversation now", please finish by sending a message that says "Conversation over." and include a json array of json objects of the mistakes I made during conversation in the format of [{"mistake":"[MISTAKE HERE"], "Correction":"[CORRECTION HERE]"}] When creating mistakes for me dont worry about things like punctuation and capitalization because those mistakes dont help me learn the words. You start the conversation. Do not say "let us begin" or anything. Just start it. And do not notate who is speaking. Just act like it is you. Have this conversation practice with me in following language and at the following language level: ';
+
+
 function textFieldToArray(inputId) {
 const inputValue = document.getElementById('key_words_field').value;
 return inputValue
@@ -8,9 +12,11 @@ return inputValue
 
 
 function uploadScenario() {
+
+
   //https://www.youtube.com/watch?v=ZH-PnY-JGBU
   //document.getElementById('upload').onclick = function() {
-
+  console.log("In uploaded")
 
   //Setting the start and stop time
   //Checking for title
@@ -42,7 +48,7 @@ function uploadScenario() {
         created_date: secondsSinceEpoch,
         description: document.getElementById("description_field").value,
         difficulty: document.getElementById("difficulty_field").value,
-        prompt: document.getElementById("prompt_field").value,
+        prompt: boiler_plate_part_1+document.getElementById("prompt_field").value+boiler_plate_part_2,
         title: document.getElementById("title_field").value,
         keyWords: result
         //keyWords: jsonString
@@ -66,8 +72,6 @@ function uploadScenario() {
 
 
 function uploadScenarioCategory() {
-
-
   //Diabling the upload button while the file is uploading.
   document.getElementById("uploadCategoryBtn").innerText = "Uploading...";
   document.getElementById("uploadCategoryBtn").disabled = true;
