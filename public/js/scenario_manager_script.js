@@ -1,5 +1,5 @@
 const boiler_plate_part_1 = "Im learning a new language and I'd like you to help me practice speaking the language. Lets do a practice conversation together. Lets pretend ";
-const boiler_plate_part_2 = ' Your job is to help me out in this situation. We will go back and forth and role play. Then after the conversation ends (i.e. you have helped me accomplish this) or i tell you to "End the conversation now", please finish by sending a message that says "Conversation over." and include a json array of json objects of the mistakes I made during conversation in the format of [{"mistake":"[MISTAKE HERE"], "Correction":"[CORRECTION HERE]"}] When creating mistakes for me dont worry about things like punctuation and capitalization because those mistakes dont help me learn the words. You start the conversation. Do not say "let us begin" or anything. Just start it. And do not notate who is speaking. Just act like it is you. Have this conversation practice with me in following language and at the following language level: ';
+const boiler_plate_part_2 = ' Your job is to help me out in this situation. We will go back and forth and role play. Please stay on topic. Then after the conversation ends (i.e. you have helped me accomplish this) or i tell you to "End the conversation now", please finish by sending a message that says "Conversation over." in english and include a json array of json objects of the mistakes I made during conversation in the format of [{"mistake":"[MISTAKE HERE"], "Correction":"[CORRECTION HERE]"}] When creating mistakes for me dont worry about things like punctuation and capitalization because those mistakes dont help me learn the words. You start the conversation. Do not say "let us begin" or anything. Just start it. And do not notate who is speaking. Just act like it is you. Have this conversation practice with me in following language and at the following language level: ';
 
 
 function textFieldToArray(inputId) {
@@ -20,7 +20,7 @@ function uploadScenario() {
 
   //Setting the start and stop time
   //Checking for title
-  if(document.getElementById("title_field").value.length == 0) { 
+  if(document.getElementById("title_field").value.length == 0) {
     alert("Come on pal give your music a title before uploading");
     return; //stop the execution of function
   }
@@ -63,9 +63,9 @@ function uploadScenario() {
         console.log(" post to node complete ");
 
         //Alerting the user that the song has been uploaded and refreshed the page
-        setTimeout(function(){ 
+        setTimeout(function(){
             alert("Upload Complete");
-            location.reload(); 
+            location.reload();
         }, 2000);
         return firebase.database().ref().update(updates);
         }
@@ -96,9 +96,9 @@ function uploadScenarioCategory() {
   console.log(" post to node complete ");
 
   //Alerting the user that the song has been uploaded and refreshed the page
-  setTimeout(function(){ 
+  setTimeout(function(){
       alert("Upload Complete");
-      location.reload(); 
+      location.reload();
   }, 2000);
   return firebase.database().ref().update(updates);
   }
