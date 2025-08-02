@@ -57,6 +57,19 @@ function uploadScenario() {
         // Get a key for a new Post.
         var newPostKey = firebase.database().ref().child('scenarios').push().key;
         console.log(" key created ");
+
+    var scenario_data = {
+
+        category: document.getElementById("category_field").value,
+        created_date: secondsSinceEpoch,
+        description: document.getElementById("description_field").value,
+        difficulty: document.getElementById("difficulty_field").value,
+        prompt: boiler_plate_part_1+document.getElementById("prompt_field").value+boiler_plate_part_2,
+        title: document.getElementById("title_field").value,
+        keyWords: result,
+        id: newPostKey
+        //keyWords: jsonString
+    };
         // Write the new post's data simultaneously in the posts list and the user's post list.
         var updates = {};
         updates['/scenarios/' + newPostKey] = scenario_data;
